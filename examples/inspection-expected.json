@@ -1,0 +1,11 @@
+{
+  "metrics": {
+    "errorSegments": 2,
+    "longestMs": 25
+  },
+  "row": {
+    "errorType": "MISS",
+    "beginMs": 0,
+    "endMs": 25
+  }
+}

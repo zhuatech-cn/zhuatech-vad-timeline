@@ -1,0 +1,280 @@
+/* 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
+:root {
+  font:
+    15px/1.55 -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Microsoft YaHei",
+    sans-serif;
+  color: #223348;
+  background: #f4f6f8;
+}
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+body {
+  margin: 0;
+}
+header {
+  min-height: 58px;
+  background: #17354d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 4vw;
+}
+header span {
+  color: #81a4b4;
+  margin: 0 10px;
+}
+#account {
+  font-size: 13px;
+}
+#notice:not(:empty) {
+  background: #fff4d8;
+  border-bottom: 1px solid #e6d29c;
+  padding: 9px 4vw;
+  overflow-wrap: anywhere;
+}
+#login {
+  max-width: 410px;
+  margin: 9vh auto;
+  padding: 28px;
+  background: white;
+  border: 1px solid #ccd6de;
+}
+#signin {
+  display: grid;
+  gap: 14px;
+}
+label {
+  font-size: 13px;
+  color: #45576b;
+  display: grid;
+  gap: 4px;
+}
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+input,
+select,
+textarea {
+  min-width: 0;
+  padding: 7px 9px;
+  border: 1px solid #b4c2cc;
+  border-radius: 3px;
+  color: #152b3d;
+  background: #fff;
+}
+textarea {
+  resize: vertical;
+}
+button {
+  border: 1px solid #b8c5cf;
+  background: #fff;
+  color: #1e3e56;
+  border-radius: 3px;
+  padding: 6px 13px;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.primary {
+  background: #205674;
+  border-color: #205674;
+  color: white;
+}
+button:hover:not(:disabled) {
+  box-shadow: inset 0 0 0 1px #56869b;
+}
+#shell {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  min-height: 80vh;
+}
+aside {
+  padding: 24px 14px;
+  background: #e9eef1;
+  border-right: 1px solid #d4dee5;
+}
+aside button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  padding: 10px 12px;
+}
+aside button.active {
+  background: white;
+  color: #174f6b;
+  font-weight: 650;
+  border-left: 3px solid #386a83;
+}
+small,
+#crumb {
+  font-size: 12px;
+  color: #536d7c;
+}
+aside small {
+  display: block;
+  padding: 12px;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #cbd4da;
+}
+main {
+  min-width: 0;
+}
+#content {
+  padding: 18px clamp(14px, 3vw, 52px) 36px;
+}
+h1 {
+  font-size: 25px;
+  margin: 5px 0;
+}
+h2 {
+  font-size: 17px;
+  margin: 18px 0 10px;
+}
+p {
+  margin: 6px 0 16px;
+}
+#intro,
+footer,
+.muted {
+  color: #526677;
+}
+.box {
+  border: 1px solid #cfd9df;
+  background: #fff;
+  padding: 18px;
+  margin: 12px 0;
+}
+.bar,
+.settings {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.settings label {
+  min-width: 95px;
+  max-width: 260px;
+}
+.scroll {
+  overflow: auto;
+  max-height: 55vh;
+  border: 1px solid #d7dfe3;
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
+}
+td,
+th {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #dce4e9;
+  vertical-align: top;
+}
+th {
+  position: sticky;
+  top: 0;
+  background: #eaf0f3;
+  white-space: nowrap;
+}
+td {
+  max-width: 480px;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+td input,
+td textarea {
+  width: 100%;
+  min-width: 105px;
+}
+td input[type="checkbox"] {
+  min-width: 24px;
+}
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+.metrics div {
+  min-width: 90px;
+}
+.metrics strong {
+  display: block;
+  color: #174c62;
+  font-size: 20px;
+}
+footer {
+  padding: 14px 4vw;
+  border-top: 1px solid #d3dee4;
+  font-size: 12px;
+}
+a {
+  color: #185974;
+}
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 720px) {
+  #shell {
+    display: block;
+  }
+  aside {
+    display: flex;
+    gap: 4px;
+    padding: 7px;
+    overflow: auto;
+  }
+  aside button {
+    width: auto;
+    white-space: nowrap;
+  }
+  aside small,
+  aside hr {
+    display: none;
+  }
+  #content {
+    padding: 12px;
+  }
+  .box {
+    padding: 11px;
+  }
+  #login {
+    margin: 5vh 12px;
+  }
+  .settings label {
+    max-width: 170px;
+  }
+}
+/* Keep a comparison switch visually next to its accessible label at all breakpoints. */
+.compare-switches{display:flex;flex-wrap:wrap;gap:8px 24px;margin:8px 0 12px}
+.compare-switches label{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+.compare-switches input[type="checkbox"]{order:-1;flex:none;width:16px;height:16px;margin:0;accent-color:#205674}
+.bar label{max-width:100%}
+summary{cursor:pointer;overflow-wrap:anywhere}
+:focus-visible{outline:2px solid #236c92;outline-offset:2px}
+/* 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ · 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。 */
+fieldset { min-inline-size:0; margin:10px 0; border:1px solid #d8e1e9; padding:8px 12px 12px; }
+fieldset legend { padding:0 4px; color:#38546b; font-size:.9rem; }
+fieldset input { max-width:100%; }
+@media(max-width:700px){fieldset .bar>*{max-width:100%;min-width:0;} fieldset{padding:6px 8px;}}

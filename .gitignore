@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+var/
+*.zhbk
+*.mv.db
+*.trace.db
+.zh-backup-*/
+.zh-restore-*/
+backend/target/
+*.log
+.DS_Store

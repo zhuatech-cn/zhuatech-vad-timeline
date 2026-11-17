@@ -1,0 +1,29 @@
+# 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: workspace
+      MYSQL_USER: workspace
+      MYSQL_PASSWORD: ${DB_PASSWORD:?set a database password}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?set a different root password}
+    volumes: [db-data:/var/lib/mysql]
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1"]
+      interval: 5s
+      timeout: 3s
+      retries: 40
+  app:
+    build: .
+    depends_on:
+      db: {condition: service_healthy}
+    ports: ["127.0.0.1:${PORT:-19445}:19445"]
+    environment:
+      PORT: "19445"
+      DB_URL: jdbc:mysql://db:3306/workspace?allowPublicKeyRetrieval=true&sslMode=DISABLED&connectionTimeZone=%2B00:00&forceConnectionTimeZoneToSession=true
+      WORKSPACE_REQUIRE_EXISTING: ${WORKSPACE_REQUIRE_EXISTING:-false}
+      DB_USER: workspace
+      DB_PASSWORD: ${DB_PASSWORD}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?set a unique initial admin password}
+volumes:
+  db-data: {}

@@ -1,0 +1,11 @@
+{
+  "expectedVersion": 0,
+  "reason": "首次设置本项目验收口径（示例，请按业务调整）",
+  "rules": [
+    {
+      "metric": "diagnostics.timeF1",
+      "operator": "GE",
+      "threshold": 0.8
+    }
+  ]
+}

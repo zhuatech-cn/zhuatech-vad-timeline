@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="分录音扫描标注与检测区间，合并重叠后累计命中、漏检和误报毫秒。 知华科技"
+    />
+    <title>知华语音活动区间验收 · 知华科技</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong>知华科技 <span>/</span> 语音活动区间验收</strong>
+      <div id="account"></div>
+    </header>
+    <div id="notice" role="status" aria-live="polite"></div>
+    <main id="login">
+      <small>企业工作空间</small>
+      <h1>登录工作台</h1>
+      <p>批次验收 · 语音活动区间验收</p>
+      <form id="signin">
+        <label
+          >账号<input name="username" autocomplete="username" required /></label
+        ><label
+          >密码<input
+            type="password"
+            name="password"
+            autocomplete="current-password"
+            required /></label
+        ><button class="primary">登录</button>
+      </form>
+    </main>
+    <div id="shell" hidden>
+      <aside>
+        <small>业务工作区</small><button id="entry">新建分析</button
+        ><button id="ledger">结果台账</button
+        ><button id="routing" hidden>复核队列</button
+        ><button id="policy">验收规则</button
+        ><small id="adminCaption" hidden>系统管理</small
+        ><button id="accounts" hidden>账号与审计</button>
+        <hr />
+        <button id="security">修改我的密码</button>
+        <button id="logout">退出登录</button>
+      </aside>
+      <main id="content">
+        <p id="crumb"></p>
+        <h1 id="heading"></h1>
+        <p id="intro"></p>
+        <section id="body"></section>
+      </main>
+    </div>
+    <footer>
+      上海如静知华信息科技有限公司 ·
+      <a href="https://www.zhuatech.cn/">知华科技官网</a>
+    </footer>
+  </body>
+</html>

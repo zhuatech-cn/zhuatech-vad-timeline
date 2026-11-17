@@ -1,0 +1,11 @@
+{
+  "metrics": {
+    "hitMs": 75,
+    "missMs": 25,
+    "falseMs": 25
+  },
+  "row": {
+    "recording": "录音1",
+    "hitMs": 75
+  }
+}

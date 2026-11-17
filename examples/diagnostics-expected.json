@@ -1,0 +1,8 @@
+{
+  "metrics": {
+    "timeF1": 0.75,
+    "activityIoU": 0.6,
+    "evaluableRecordings": 1
+  },
+  "tolerance": 1e-10
+}

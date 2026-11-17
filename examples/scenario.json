@@ -1,0 +1,11 @@
+{
+  "name": "忽略不足 101 毫秒的片段",
+  "settings": {
+    "minDurationMs": 101
+  },
+  "checkpoint": {
+    "metric": "ignored",
+    "expected": 3,
+    "absoluteTolerance": 1e-10
+  }
+}

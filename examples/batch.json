@@ -1,0 +1,29 @@
+{
+  "title": "语音活动区间验收验收样本",
+  "settings": {
+    "minDurationMs": 1
+  },
+  "rows": [
+    {
+      "id": "A",
+      "recording": "录音1",
+      "track": "reference",
+      "beginMs": 0,
+      "endMs": 100
+    },
+    {
+      "id": "B",
+      "recording": "录音1",
+      "track": "detected",
+      "beginMs": 25,
+      "endMs": 125
+    },
+    {
+      "id": "C",
+      "recording": "录音1",
+      "track": "detected",
+      "beginMs": 50,
+      "endMs": 100
+    }
+  ]
+}
